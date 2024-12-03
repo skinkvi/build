@@ -1,0 +1,76 @@
+body {
+    background-image: url(/styles/img/background.png);
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.nunito-sans {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}
+
+.header {
+    margin-top: 1rem
+}
+
+@import "design";
+@import "repair";
+@import "choice";
+
+.main_text {
+    line-height: 1;
+    font-size: 65px;
+    font-family: 'inter';
+    margin-top: 8rem;
+    color: #ffffff;
+
+    span {
+        color: #FF8800;
+    }
+}
+.main_cards{
+    margin-top: 85px;
+    display: flex;
+    justify-content: space-between;
+    .card{
+        width: 25rem;
+        background-color: #ffffff;
+        border-radius: 29px;
+        padding: 30px 20px;
+        .card-body{
+            h5{
+                margin-bottom: 1rem;
+                font-size: 32px;
+                font-family: 'Nunito Sans';
+            }
+            p{
+                margin-bottom: 1rem;
+                font-family: 'Nunito Sans';
+                font-size: 22px;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .btn_main_card{
+            border-radius: 18px;
+            background-color: #FF8800;
+            display: flex;
+            align-items: center;
+            padding: 17px 17px;
+            svg{
+                margin-right: 1rem;
+            }
+        }
+    }
+}

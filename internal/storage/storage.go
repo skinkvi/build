@@ -66,3 +66,35 @@ func (s *Storage) GetUserByID(ctx context.Context, userID string) (*User, error)
 
 	return &user, nil
 }
+
+func (s *Storage) FindMaterials(materialNames []string) ([]Material, error) {
+	ctx := context.Background()
+	query := `SELECT id, name, category, image_url, description, purchase_location, created_at FROM materials WHERE name = ANY($1)`
+	rows, err := s.pool.Query(ctx, query, materialNames)
+	if err != nil {
+		s.logger.Error("Ошибка при выполнении запроса к базе данных", zap.Error(err))
+		return nil, err
+	}
+	defer rows.Close()
+
+	var materials []Material
+	for rows.Next() {
+		var material Material
+		err := rows.Scan(
+			&material.ID,
+			&material.Name,
+			&material.Category,
+			&material.ImageURL,
+			&material.Description,
+			&material.PurchaseLocation,
+			&material.CreatedAt,
+		)
+		if err != nil {
+			s.logger.Error("Ошибка при сканировании строки", zap.Error(err))
+			return nil, err
+		}
+		materials = append(materials, material)
+	}
+
+	return materials, nil
+}

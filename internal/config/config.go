@@ -8,8 +8,13 @@ import (
 )
 
 type Config struct {
-	Server   ServerConfig   `yaml:"server"`
-	Database DatabaseConfig `yaml:"database"`
+	Server    ServerConfig    `yaml:"server"`
+	Database  DatabaseConfig  `yaml:"database"`
+	AIService AIServiceConfig `yaml:"ai_service"`
+}
+
+type AIServiceConfig struct {
+	APIKey string `yaml:"api_key"`
 }
 
 type ServerConfig struct {

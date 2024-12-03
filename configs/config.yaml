@@ -8,3 +8,6 @@ database:
   password: "postgres"
   dbname: "podbordb"
   sslmode: "disable"
+
+ai_service:
+  api_key: "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"

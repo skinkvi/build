@@ -8,6 +8,7 @@ import (
 	"podbor/internal/server"
 	"podbor/internal/storage"
 
+	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
 
@@ -29,9 +30,13 @@ func main() {
 	}
 	defer st.Close()
 
-	app := app.New(st, logger.Log, config.Cfg)
+	gin.SetMode(gin.ReleaseMode)
 
-	srv := server.New(app, config.Cfg, logger.Log)
+	appInstance := app.New(st, logger.Log, config.Cfg)
+
+	srv := server.New(appInstance, config.Cfg, logger.Log)
+	srv.Engine.MaxMultipartMemory = 8 << 20 // 8 MiB
+
 	if err := srv.Start(); err != nil {
 		logger.Log.Fatal("Не удалось запустить сервер: ", zap.Error(err))
 	}

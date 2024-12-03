@@ -1,0 +1,321 @@
+body {
+  background-image: url(/styles/img/background.png);
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.nunito-sans {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+.header {
+  margin-top: 1rem;
+}
+
+.design_text {
+  line-height: 1;
+  font-size: 65px;
+  font-family: "inter";
+  margin-top: 8rem;
+  color: #ffffff;
+}
+.design_text span {
+  color: #FF8800;
+}
+
+.design_cards {
+  background-color: #ffffff;
+  border-radius: 39px;
+  padding: 45px 45px;
+  margin-top: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.design_cards .cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.design_cards .design_tittle_cards {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.design_cards .design_tittle_cards h5 {
+  margin-bottom: 1rem;
+  font-size: 32px;
+  font-family: "Nunito Sans";
+  font-weight: 700;
+}
+.design_cards .design_tittle_cards .btn_design_card {
+  min-width: 18em;
+  border-radius: 18px;
+  background-color: #FF8800;
+  display: flex;
+  align-items: center;
+  padding: 17px 17px;
+  font-weight: 700;
+  font-family: "Nunito Sans";
+  border: 2px solid black;
+}
+.design_cards .design_tittle_cards .btn_design_card svg {
+  margin-right: 1rem;
+}
+.design_cards .card {
+  min-height: 22rem;
+  max-width: 25rem;
+  background-color: #FF8800;
+  border-radius: 29px;
+  padding: 30px 20px;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+}
+.design_cards .card label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.design_cards .card .input-file input[type=file] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.design_cards .card .input-file svg {
+  margin-right: 10px;
+}
+.design_cards .card .text_card {
+  background: #FF8800;
+  border: 1px solid black;
+}
+
+.repair_text {
+  line-height: 1;
+  font-size: 65px;
+  font-family: "inter";
+  margin-top: 8rem;
+  color: #ffffff;
+}
+.repair_text span {
+  color: #FF8800;
+}
+
+.repair_cards {
+  background-color: #ffffff;
+  border-radius: 39px;
+  padding: 45px 45px;
+  margin-top: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.repair_cards .cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.repair_cards .repair_tittle_cards {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.repair_cards .repair_tittle_cards h5 {
+  margin-bottom: 1rem;
+  font-size: 32px;
+  font-family: "Nunito Sans";
+  font-weight: 700;
+}
+.repair_cards .repair_tittle_cards .btn_repair_card {
+  min-width: 18em;
+  border-radius: 18px;
+  background-color: #FF8800;
+  display: flex;
+  align-items: center;
+  padding: 17px 17px;
+  font-weight: 700;
+  font-family: "Nunito Sans";
+  border: 2px solid black;
+}
+.repair_cards .repair_tittle_cards .btn_repair_card svg {
+  margin-right: 1rem;
+}
+.repair_cards .card {
+  min-height: 22rem;
+  width: 40%;
+  background-color: #FF8800;
+  border-radius: 29px;
+  padding: 30px 20px;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+}
+.repair_cards .card label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.repair_cards .card .input-file input[type=file] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.repair_cards .card .input-file svg {
+  margin-right: 10px;
+}
+.repair_cards .card .text_card {
+  height: 18rem;
+  background: #FF8800;
+  border: 1px solid black;
+}
+
+.choice_text {
+  line-height: 1;
+  font-size: 65px;
+  font-family: "inter";
+  margin-top: 8rem;
+  color: #ffffff;
+}
+.choice_text span {
+  color: #FF8800;
+}
+
+.choice_cards {
+  background-color: #ffffff;
+  border-radius: 39px;
+  padding: 45px 45px;
+  margin-top: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.choice_cards .cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.choice_cards .choice_tittle_cards {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.choice_cards .choice_tittle_cards h5 {
+  margin-bottom: 1rem;
+  font-size: 32px;
+  font-family: "Nunito Sans";
+  font-weight: 700;
+}
+.choice_cards .choice_tittle_cards .btn_choice_card {
+  min-width: 18em;
+  border-radius: 18px;
+  background-color: #FF8800;
+  display: flex;
+  align-items: center;
+  padding: 17px 17px;
+  font-weight: 700;
+  font-family: "Nunito Sans";
+  border: 2px solid black;
+}
+.choice_cards .choice_tittle_cards .btn_choice_card svg {
+  margin-right: 1rem;
+}
+.choice_cards .card {
+  min-height: 22rem;
+  width: 40%;
+  background-color: #FF8800;
+  border-radius: 29px;
+  padding: 30px 20px;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+}
+.choice_cards .card label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.choice_cards .card .input-file input[type=file] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.choice_cards .card .input-file svg {
+  margin-right: 10px;
+}
+.choice_cards .card .text_card {
+  height: 18rem;
+  background: #FF8800;
+  border: 1px solid black;
+}
+
+.main_text {
+  line-height: 1;
+  font-size: 65px;
+  font-family: "inter";
+  margin-top: 8rem;
+  color: #ffffff;
+}
+.main_text span {
+  color: #FF8800;
+}
+
+.main_cards {
+  margin-top: 85px;
+  display: flex;
+  justify-content: space-between;
+}
+.main_cards .card {
+  width: 25rem;
+  background-color: #ffffff;
+  border-radius: 29px;
+  padding: 30px 20px;
+}
+.main_cards .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main_cards .card .card-body h5 {
+  margin-bottom: 1rem;
+  font-size: 32px;
+  font-family: "Nunito Sans";
+}
+.main_cards .card .card-body p {
+  margin-bottom: 1rem;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+}
+.main_cards .card .btn_main_card {
+  border-radius: 18px;
+  background-color: #FF8800;
+  display: flex;
+  align-items: center;
+  padding: 17px 17px;
+}
+.main_cards .card .btn_main_card svg {
+  margin-right: 1rem;
+}/*# sourceMappingURL=style.css.map */

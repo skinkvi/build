@@ -1,0 +1,93 @@
+.design_text {
+    line-height: 1;
+    font-size: 65px;
+    font-family: 'inter';
+    margin-top: 8rem;
+    color: #ffffff;
+
+    span {
+        color: #FF8800;
+    }
+}
+
+.design_cards {
+    background-color: #ffffff;
+    border-radius: 39px;
+    padding: 45px 45px;
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .cards {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .design_tittle_cards {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+
+        h5 {
+            margin-bottom: 1rem;
+            font-size: 32px;
+            font-family: 'Nunito Sans';
+            font-weight: 700;
+        }
+
+        .btn_design_card {
+            min-width: 18em;
+            border-radius: 18px;
+            background-color: #FF8800;
+            display: flex;
+            align-items: center;
+            padding: 17px 17px;
+            font-weight: 700;
+            font-family: 'Nunito Sans';
+            border: 2px solid black;
+
+            svg {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .card {
+        min-height: 22rem;
+        max-width: 25rem;
+        background-color: #FF8800;
+        border-radius: 29px;
+        padding: 30px 20px;
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: center;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-file input[type=file] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            display: block;
+            width: 0;
+            height: 0;
+        }
+
+        .input-file svg {
+            margin-right: 10px;
+        }
+
+        .text_card {
+            background: #FF8800;
+            border: 1px solid black;
+        }
+    }
+}

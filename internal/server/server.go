@@ -13,7 +13,7 @@ import (
 
 type Server struct {
 	app    *app.App
-	engine *gin.Engine
+	Engine *gin.Engine
 	logger *zap.Logger
 }
 
@@ -28,7 +28,7 @@ func New(app *app.App, cfg *config.Config, logger *zap.Logger) *Server {
 
 	return &Server{
 		app:    app,
-		engine: engine,
+		Engine: engine,
 		logger: logger,
 	}
 }
@@ -36,7 +36,7 @@ func New(app *app.App, cfg *config.Config, logger *zap.Logger) *Server {
 func (s *Server) Start() error {
 	addr := ":" + s.app.Config.Server.Port
 	s.logger.Info("Server started", zap.String("addr", addr))
-	return s.engine.Run(addr)
+	return s.Engine.Run(addr)
 }
 
 func (s *Server) Stop(ctx context.Context) error {
