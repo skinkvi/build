@@ -14,3 +14,38 @@ COPY docker-entrypoint-initdb.d /docker-entrypoint-initdb.d
 
 # Установка переменных окружения
 ENV TERN_MIGRATIONS=/migrations 
+
+FROM golang:1.20-alpine AS builder
+
+# Устанавливаем рабочую директорию внутри контейнера
+WORKDIR /app
+
+# Копируем файлы go.mod и go.sum для скачивания зависимостей
+COPY go.mod go.sum ./
+
+# Загружаем зависимости
+RUN go mod download
+
+# Копируем весь исходный код
+COPY . .
+
+# Собираем приложение
+RUN go build -o podbor ./cmd/podbor/main.go
+
+# Создаем финальный образ
+FROM alpine:latest
+
+# Устанавливаем рабочую директорию
+WORKDIR /root/
+
+# Копируем бинарный файл из предыдущего этапа
+COPY --from=builder /app/podbor .
+
+# Копируем конфигурационные файлы
+COPY --from=builder /app/configs ./configs
+
+# Открываем порт 8080
+EXPOSE 8080
+
+# Запускаем приложение
+CMD ["./podbor"]
