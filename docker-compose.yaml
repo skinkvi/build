@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: podbor
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./backend/migrations:/app/migrations
+
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: go_backend
+    restart: always
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: db
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: podbor
+      DB_PORT: "5432"
+      OPENAI_API_KEY: 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
+      ENV_FILE: /app/.env
+    depends_on:
+      - db
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/tern.conf:/app/tern.conf
+      - ./backend/.env:/app/.env
+
+volumes:
+  db_data:

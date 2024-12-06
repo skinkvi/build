@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат ремонта</title>
+    <link rel="stylesheet" href="./styles/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container-lg header">
+            <svg width="309" height="67" viewBox="0 0 309 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- SVG content here -->
+            </svg>
+            <!-- Include other header content from repair.html if any -->
+        </div>
+    </header>
+    <main>
+        <div class="container-lg">
+            <div class="repair_text">
+                <p>Вот инструкции по ремонту, подготовленные специально для вас:</p>
+            </div>
+            <div class="repair_cards">
+                <div class="card">
+                    <h3>Инструкции по починке</h3>
+                    <p>{{ .instructions }}</p>
+                </div>
+                <!-- If you have materials or other info to display, include them here -->
+                <!-- Example:
+                <div class="card">
+                    <h3>Необходимые материалы</h3>
+                    <ul>
+                        {{ range .materials }}
+                            <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+                -->
+            </div>
+            <a href="/repair" class="btn btn_repair_card">Назад к форме</a>
+        </div>
+    </main>
+</body>
+
+</html>
