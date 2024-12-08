@@ -5,8 +5,6 @@ import (
 	"log"
 	"os"
 
-	"podbor/models"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -32,6 +30,4 @@ func InitDB() {
 
 	log.Println("Database connection established")
 
-	// Auto-migrate models
-	DB.AutoMigrate(&models.User{}, &models.Project{}, &models.Material{}, &models.ProjectMaterial{}, &models.AIResponse{})
 }

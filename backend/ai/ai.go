@@ -34,7 +34,7 @@ func GetAIResponse(description string, imagePath string) (string, error) {
 }
 
 func RunAI(imagePath string, promptText string) (string, error) {
-	cmd := exec.Command("python3", "./ai/ai.py", imagePath, promptText)
+	cmd := exec.Command("python3", "./ai/ai.py", imagePath, promptText+"\n\nПожалуйста, ответьте на русском языке.")
 
 	// Захватываем stdout и stderr
 	output, err := cmd.CombinedOutput()

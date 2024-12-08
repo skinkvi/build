@@ -8,7 +8,3 @@ CREATE TABLE IF NOT EXISTS projects (
     image_url TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-
--- +migrate Down
-
-DROP TABLE IF EXISTS projects CASCADE; 

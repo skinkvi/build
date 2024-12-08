@@ -9,5 +9,3 @@ CREATE TABLE IF NOT EXISTS ai_responses (
 );
 
 -- +migrate Down
-
-DROP TABLE IF EXISTS ai_responses CASCADE; 

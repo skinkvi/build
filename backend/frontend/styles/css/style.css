@@ -1,5 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-image: url(/styles/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 
 .inter {
@@ -37,6 +52,7 @@ body {
   border-radius: 39px;
   padding: 45px 45px;
   margin-top: 85px;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -100,8 +116,13 @@ body {
   margin-right: 10px;
 }
 .design_cards .card .text_card {
+  height: 18rem;
   background: #FF8800;
   border: 1px solid black;
+}
+.design_cards .card textarea {
+  border: none;
+  outline: none;
 }
 
 .repair_text {
@@ -120,6 +141,7 @@ body {
   border-radius: 39px;
   padding: 45px 45px;
   margin-top: 85px;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -204,6 +226,7 @@ body {
   border-radius: 39px;
   padding: 45px 45px;
   margin-top: 85px;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -272,6 +295,279 @@ body {
   border: 1px solid black;
 }
 
+.enter_text {
+  line-height: 1;
+  font-size: 65px;
+  font-family: "inter";
+  margin-top: 8rem;
+  color: #ffffff;
+}
+.enter_text span {
+  color: #FF8800;
+}
+
+.enter_cards {
+  background-color: #ffffff;
+  border-radius: 39px;
+  padding: 45px 45px;
+  margin-top: 85px;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.enter_cards .cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.enter_cards .enter_tittle {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.enter_cards .enter_tittle p {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+}
+.enter_cards .enter_tittle p a {
+  color: #FF8800;
+}
+.enter_cards .enter_tittle p a:hover {
+  color: #a25600;
+}
+.enter_cards .enter_tittle h5 {
+  margin-bottom: 1rem;
+  font-size: 32px;
+  font-family: "Nunito Sans";
+  font-weight: 700;
+}
+.enter_cards .enter_tittle .btn_enter_card {
+  min-width: 18em;
+  border-radius: 18px;
+  background-color: #FF8800;
+  display: flex;
+  align-items: center;
+  padding: 17px 17px;
+  font-weight: 700;
+  font-family: "Nunito Sans";
+  border: 2px solid black;
+}
+.enter_cards .enter_tittle .btn_enter_card svg {
+  margin-right: 1rem;
+}
+.enter_cards .enter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.enter_cards .enter input {
+  padding: 0.5rem 1rem;
+  width: 30rem;
+  border-radius: 18px;
+  font-size: 18px;
+}
+.enter_cards .enter .submit {
+  border-radius: 18px;
+  background-color: #FF8800;
+  color: #ffffff;
+  border: none;
+  padding: 21px 86px;
+  margin-bottom: 3rem;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Nunito Sans";
+}
+.enter_cards .enter .submit:hover {
+  background-color: #a25600;
+}
+.enter_cards .enter .enter_enter {
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+.enter_cards .enter .enter_password {
+  font-size: 18px;
+  margin-bottom: 6rem;
+  font-family: "Nunito Sans";
+}
+.enter_cards .enter .enter_password .password {
+  position: relative;
+}
+.enter_cards .enter .enter_password .password-control {
+  position: absolute;
+  top: 11px;
+  right: 1rem;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(/styles/img/eye.svg) 0 0 no-repeat;
+}
+.enter_cards .enter .enter_password .password-control.view {
+  background: url(/styles/img/openEye.svg) 0 0 no-repeat;
+}
+.enter_cards .enter .enter_submit {
+  margin-bottom: 2rem;
+}
+.enter_cards .enter .line-box {
+  font-size: 12px;
+  text-align: right;
+}
+.enter_cards .enter .line-box a {
+  color: #090909;
+}
+.enter_cards .enter_text_end {
+  font-size: 12px;
+}
+.enter_cards .enter_text_end a {
+  color: #FF8800;
+}
+.enter_cards .enter_text_end a:hover {
+  color: #a25600;
+}
+
+.registration_text {
+  line-height: 1;
+  font-size: 65px;
+  font-family: "inter";
+  margin-top: 8rem;
+  color: #ffffff;
+}
+.registration_text span {
+  color: #FF8800;
+}
+
+.registration_cards {
+  background-color: #ffffff;
+  border-radius: 39px;
+  padding: 45px 45px;
+  margin-top: 85px;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.registration_cards .cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.registration_cards .registration_tittle {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.registration_cards .registration_tittle p {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+}
+.registration_cards .registration_tittle p a {
+  color: #FF8800;
+}
+.registration_cards .registration_tittle p a:hover {
+  color: #a25600;
+}
+.registration_cards .registration_tittle h5 {
+  margin-bottom: 1rem;
+  font-size: 32px;
+  font-family: "Nunito Sans";
+  font-weight: 700;
+}
+.registration_cards .registration_tittle .btn_enter_card {
+  min-width: 18em;
+  border-radius: 18px;
+  background-color: #FF8800;
+  display: flex;
+  align-items: center;
+  padding: 17px 17px;
+  font-weight: 700;
+  font-family: "Nunito Sans";
+  border: 2px solid black;
+}
+.registration_cards .registration_tittle .btn_enter_card svg {
+  margin-right: 1rem;
+}
+.registration_cards .registration {
+  font-family: "Nunito Sans";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registration_cards .registration input {
+  padding: 0.5rem 1rem;
+  width: 30rem;
+  border-radius: 18px;
+  font-size: 18px;
+}
+.registration_cards .registration .submit {
+  border-radius: 18px;
+  background-color: #FF8800;
+  color: #ffffff;
+  border: none;
+  padding: 21px 86px;
+  margin-bottom: 3rem;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Nunito Sans";
+}
+.registration_cards .registration .submit:hover {
+  background-color: #a25600;
+}
+.registration_cards .registration .registration_email {
+  font-size: 18px;
+}
+.registration_cards .registration .registration_username {
+  font-size: 18px;
+  margin-bottom: 4rem;
+}
+.registration_cards .registration .registration_password {
+  font-size: 18px;
+}
+.registration_cards .registration .registration_confirm_password {
+  font-size: 18px;
+  margin-bottom: 6rem;
+}
+.registration_cards .registration .password {
+  position: relative;
+}
+.registration_cards .registration .password-control {
+  position: absolute;
+  top: 11px;
+  right: 1rem;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(/styles/img/eye.svg) 0 0 no-repeat;
+}
+.registration_cards .registration .password-control.view {
+  background: url(/styles/img/openEye.svg) 0 0 no-repeat;
+}
+.registration_cards .registration .registration_submit {
+  margin-bottom: 2rem;
+}
+.registration_cards .registration .line-box {
+  font-size: 12px;
+  text-align: right;
+}
+.registration_cards .registration .line-box a {
+  color: #090909;
+}
+.registration_cards .registration_text_end {
+  font-size: 12px;
+}
+.registration_cards .registration_text_end a {
+  color: #FF8800;
+}
+.registration_cards .registration_text_end a:hover {
+  color: #a25600;
+}
+
 .main_text {
   line-height: 1;
   font-size: 65px;
@@ -287,12 +583,14 @@ body {
   margin-top: 85px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .main_cards .card {
   width: 25rem;
   background-color: #ffffff;
   border-radius: 29px;
   padding: 30px 20px;
+  margin-bottom: 5rem;
 }
 .main_cards .card .card-body {
   display: flex;
@@ -319,3 +617,86 @@ body {
 .main_cards .card .btn_main_card svg {
   margin-right: 1rem;
 }/*# sourceMappingURL=style.css.map */
+/* Секция результата */
+#result {
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#result h3 {
+  font-size: 24px;
+  color: #333333;
+}
+
+#materials li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Секция ответа AI */
+#ai-response {
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#ai-response h3 {
+  font-size: 24px;
+  color: #333333;
+}
+
+#ai-response p {
+  font-size: 18px;
+  color: #555555;
+}
+
+/* Секция необходимых материалов */
+.required-materials {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.required-materials h2 {
+  font-size: 28px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.required-materials ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.required-materials li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.required-materials li img {
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+/* Стили предупреждений */
+.alert {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #e7f3fe;
+  color: #31708f;
+  margin-top: 1rem;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .cards {
+      flex-direction: column;
+  }
+
+  .card {
+      flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,164 @@
+.registration_text {
+    line-height: 1;
+    font-size: 65px;
+    font-family: 'inter';
+    margin-top: 8rem;
+    color: #ffffff;
+
+    span {
+        color: #FF8800;
+    }
+}
+
+.registration_cards {
+    background-color: #ffffff;
+    border-radius: 39px;
+    padding: 45px 45px;
+    margin-top: 85px;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .cards {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .registration_tittle {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+
+        p {
+            font-size: 18px;
+            font-family: 'Nunito Sans';
+
+            a {
+                color: #FF8800;
+
+                &:hover {
+                    color: #a25600;
+                }
+            }
+        }
+
+        h5 {
+            margin-bottom: 1rem;
+            font-size: 32px;
+            font-family: 'Nunito Sans';
+            font-weight: 700;
+        }
+
+        .btn_enter_card {
+            min-width: 18em;
+            border-radius: 18px;
+            background-color: #FF8800;
+            display: flex;
+            align-items: center;
+            padding: 17px 17px;
+            font-weight: 700;
+            font-family: 'Nunito Sans';
+            border: 2px solid black;
+
+            svg {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .registration {
+        font-family: 'Nunito Sans';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            padding: 0.5rem 1rem;
+            width: 30rem;
+            border-radius: 18px;
+            font-size: 18px;
+        }
+
+        .submit {
+            border-radius: 18px;
+            background-color: #FF8800;
+            color: #ffffff;
+            border: none;
+            padding: 21px 86px;
+            margin-bottom: 3rem;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Nunito Sans';
+
+            &:hover {
+                background-color: #a25600;
+            }
+        }
+
+        .registration_email {
+            font-size: 18px;
+        }
+
+        .registration_username {
+            font-size: 18px;
+            margin-bottom: 4rem;
+        }
+
+        .registration_password {
+            font-size: 18px;
+        }
+
+        .registration_confirm_password {
+            font-size: 18px;
+            margin-bottom: 6rem;
+        }
+
+        .password {
+            position: relative;
+        }
+
+        .password-control {
+            position: absolute;
+            top: 11px;
+            right: 1rem;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background: url(/styles/img/eye.svg) 0 0 no-repeat;
+        }
+
+        .password-control.view {
+            background: url(/styles/img/openEye.svg) 0 0 no-repeat;
+        }
+
+        .registration_submit {
+            margin-bottom: 2rem;
+        }
+
+        .line-box {
+            a {
+                color: #090909;
+            }
+
+            font-size: 12px;
+            text-align: right;
+        }
+    }
+
+    .registration_text_end {
+        font-size: 12px;
+
+        a {
+            color: #FF8800;
+
+            &:hover {
+                color: #a25600;
+            }
+        }
+    }
+}

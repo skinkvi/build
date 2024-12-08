@@ -2,7 +2,7 @@
 FROM golang:1.23.2-alpine
 
 # Устанавливаем необходимые зависимости и инструменты, включая OpenVPN
-RUN apk update && apk add --no-cache git bash curl build-base python3 py3-pip 
+RUN apk update && apk add --no-cache git bash curl build-base python3 py3-pip postgresql-client
 
 # Устанавливаем migrate через go install
 RUN go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest && \
@@ -39,5 +39,5 @@ ENV ENV_FILE=/app/.env
 # Указываем порт, на котором будет работать приложение
 EXPOSE 8080
 
-# Определяем команду для запуска OpenVPN и бэкенда
-CMD /app/migrate.sh && /app/podbor
+# Определяем команду для запуска миграций и бэкенда
+CMD ["/migrate.sh"]

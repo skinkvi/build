@@ -12,4 +12,3 @@ CREATE TABLE IF NOT EXISTS materials (
 
 -- +migrate Down
 
-DROP TABLE IF EXISTS materials CASCADE; 

@@ -8,5 +8,7 @@ type User struct {
 	PasswordHash string `gorm:"not null"`
 	Email        string `gorm:"unique;not null"`
 	CreatedAt    time.Time
+	Provider     string `gorm:"index"`
+	ProviderID   string `gorm:"uniqueIndex"`
 	Projects     []Project
 }

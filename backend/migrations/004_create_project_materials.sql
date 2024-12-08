@@ -7,5 +7,3 @@ CREATE TABLE IF NOT EXISTS project_materials (
 );
 
 -- +migrate Down
-
-DROP TABLE IF EXISTS project_materials CASCADE; 
