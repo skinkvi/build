@@ -84,6 +84,7 @@
             </a>
         </div>
     </header>
+
     <main>
         <div class="container-lg">
             <div class="enter_text">
@@ -95,7 +96,7 @@
                     <p>Еще нет аккаунта? <a href="/registration.html">Зарегистрироваться</a></p>
                 </div>
                 <form class="enter" action="/auth/login" method="POST">
-                    <label class="enter_enter">
+                    <label class="enter_email">
                         <p>Ваш email</p>
                         <input type="email" class="input" name="email" required />
                         <div class="line-box">
@@ -105,9 +106,8 @@
                     <label class="enter_password">
                         <p>Пароль</p>
                         <div class="password">
-                            <input type="password" class="input" placeholder="Введите пароль" name="password"
-                                id="password-input" required />
-                            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                            <input type="password" class="input" name="password" id="password-input" required />
+                            <a href="#" class="password-control" onclick="return togglePasswordVisibility(this, 'password-input');"></a>
                         </div>
                         <div class="line-box">
                             <div class="line"><a href="#">Забыли пароль?</a></div>

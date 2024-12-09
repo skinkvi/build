@@ -40,7 +40,7 @@ func main() {
 	// Загрузка HTML шаблонов
 	router.LoadHTMLGlob("frontend/*.html")
 
-	// Обс��уживание статических файлов
+	// Обслуживание статических файлов
 	router.Static("/styles", "./frontend/styles")
 	router.Static("/img", "./frontend/styles/img")
 	router.Static("/uploads", "./uploads") // Обслуживание загруженных изображений

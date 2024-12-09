@@ -83,6 +83,7 @@
             </a>
         </div>
     </header>
+
     <main>
         <div class="container-lg">
             <div class="registration_text">
@@ -92,14 +93,11 @@
                 <div class="registration_tittle">
                     <h5>Регистрация</h5>
                 </div>
+                <!-- Отображение ошибки, если есть -->
+                {{if .error}}
+                <div class="alert alert-danger">{{.error}}</div>
+                {{end}}
                 <form class="registration" action="/auth/register" method="POST">
-                    <label class="registration_email">
-                        <p>Ваш email</p>
-                        <input type="email" class="input" name="email" required />
-                        <div class="line-box">
-                            <div class="line"></div>
-                        </div>
-                    </label>
                     <label class="registration_username">
                         <p>Ваш ник</p>
                         <input type="text" class="input" name="username" required />
@@ -107,20 +105,31 @@
                             <div class="line"></div>
                         </div>
                     </label>
-                    <label class="registration_password">
-                        <p>Пароль</p>
-                        <div class="password">
-                            <input type="password" class="input" placeholder="Введите пароль" name="password"
-                                id="password-input" required />
-                            <a href="#" class="password-control" onclick="return togglePasswordVisibility(this, 'password-input');"></a>
+                    <label class="registration_email">
+                        <p>Ваш email</p>
+                        <input type="email" class="input" name="email" required />
+                        <div class="line-box">
+                            <div class="line"></div>
                         </div>
                     </label>
-                    <label class="registration_confirm_password">
-                        <p>Повторите пароль</p>
+                    <label class="registration_password">
+                        <p>Пароль (минимум 6 символов)</p>
                         <div class="password">
-                            <input type="password" class="input" placeholder="Введите пароль" name="password_confirm"
-                                id="password-confirm" required />
-                            <a href="#" class="password-control" onclick="return togglePasswordVisibility(this, 'password-confirm');"></a>
+                            <input type="password" class="input" name="password" id="password-input" required />
+                            <a href="#" class="password-control" onclick="return togglePasswordVisibility(this, 'password-input');"></a>
+                        </div>
+                        <div class="line-box">
+                            <div class="line"></div>
+                        </div>
+                    </label>
+                    <label class="registration_password_confirm">
+                        <p>Подтвердите пароль</p>
+                        <div class="password">
+                            <input type="password" class="input" name="password_confirm" id="password-confirm-input" required />
+                            <a href="#" class="password-control" onclick="return togglePasswordVisibility(this, 'password-confirm-input');"></a>
+                        </div>
+                        <div class="line-box">
+                            <div class="line"></div>
                         </div>
                     </label>
                     <label class="registration_submit">
