@@ -77,6 +77,14 @@ func main() {
 		c.HTML(http.StatusOK, "enter.html", nil)
 	})
 
+	// Маршрут для отображения choice.html
+	router.GET("/choice", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "choice.html", nil)
+	})
+
+	// Маршрут для обработки отправки формы из choice.html
+	router.POST("/choice", handlers.ChoiceHandler)
+
 	// Запуск сервера на порту 8080
 	if err := router.Run(":8080"); err != nil {
 		log.Fatalf("Failed to run server: %v", err)
