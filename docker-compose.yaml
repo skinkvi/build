@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   db:
@@ -31,7 +31,7 @@ services:
       DB_PASSWORD: postgres
       DB_NAME: podbor
       DB_PORT: "5432"
-      OPENAI_API_KEY: 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
+      OPENAI_API_KEY: secret
       ENV_FILE: /app/.env
     depends_on:
       - db
