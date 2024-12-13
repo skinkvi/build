@@ -1,9 +1,19 @@
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
 .choice_text {
     line-height: 1;
     font-size: 65px;
     font-family: 'inter';
     margin-top: 8rem;
     color: #ffffff;
+    @media(max-width: $sm) {
+        font-size: 40px;
+        margin-top: 4rem;
+    }
 
     span {
         color: #FF8800;
@@ -15,6 +25,7 @@
     border-radius: 39px;
     padding: 45px 45px;
     margin-top: 85px;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,13 +35,25 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media(max-width: $sm) {
+            align-items: stretch;
+            flex-direction: column;
+        }
+        .plus{
+            @media (max-width: $sm) {
+                display: none;
+            }
+        }
     }
 
-    .choice_tittle_cards {
+    .choice_title_cards {
         justify-content: space-between;
         display: flex;
         align-items: center;
         margin-bottom: 1em;
+        @media (max-width: $sm) {
+            flex-direction: column;
+        }
 
         h5 {
             margin-bottom: 1rem;
@@ -38,7 +61,7 @@
             font-family: 'Nunito Sans';
             font-weight: 700;
         }
-
+        
         .btn_choice_card {
             min-width: 18em;
             border-radius: 18px;
@@ -49,7 +72,9 @@
             font-weight: 700;
             font-family: 'Nunito Sans';
             border: 2px solid black;
-
+            &:hover{
+                background-color: #E87E04;
+            }
             svg {
                 margin-right: 1rem;
             }
@@ -65,7 +90,12 @@
         margin-bottom: 2em;
         display: flex;
         justify-content: center;
-
+        @media (max-width: $sm) {
+            width: 100%;
+        }
+        span{
+            text-align: center;
+        }
         label {
             display: flex;
             flex-direction: column;

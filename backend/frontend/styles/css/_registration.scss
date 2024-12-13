@@ -5,6 +5,10 @@
     margin-top: 8rem;
     color: #ffffff;
 
+    @media(max-width: $sm) {
+        display: none;
+    }
+
     span {
         color: #FF8800;
     }
@@ -33,9 +37,17 @@
         align-items: center;
         margin-bottom: 1em;
 
+        @media(max-width: $sm) {
+            margin-bottom: 2rem;
+        }
+
         p {
             font-size: 18px;
             font-family: 'Nunito Sans';
+
+            @media(max-width: $sm) {
+                text-align: center;
+            }
 
             a {
                 color: #FF8800;
@@ -51,6 +63,11 @@
             font-size: 32px;
             font-family: 'Nunito Sans';
             font-weight: 700;
+
+            @media(max-width: $sm) {
+                text-align: center;
+                font-size: 27px;
+            }
         }
 
         .btn_enter_card {
@@ -81,6 +98,10 @@
             width: 30rem;
             border-radius: 18px;
             font-size: 18px;
+
+            @media(max-width: $sm) {
+                width: 15rem;
+            }
         }
 
         .submit {
@@ -95,6 +116,11 @@
             font-weight: 700;
             font-family: 'Nunito Sans';
 
+            @media(max-width: $sm) {
+                font-size: 18px;
+                padding: 13px 16px;
+            }
+
             &:hover {
                 background-color: #a25600;
             }
@@ -102,20 +128,62 @@
 
         .registration_email {
             font-size: 18px;
+
+            @media(max-width: $sm) {
+                font-size: 14px;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                @media(max-width: $sm) {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .registration_username {
             font-size: 18px;
             margin-bottom: 4rem;
+
+            @media(max-width: $sm) {
+                font-size: 14px;
+                margin-bottom: 4rem;
+            }
+
+            p {
+                @media(max-width: $sm) {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .registration_password {
             font-size: 18px;
+
+            @media(max-width: $sm) {
+                font-size: 14px;
+                margin-bottom: 0.5rem;
+            }
+            p {
+                @media(max-width: $sm) {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .registration_confirm_password {
             font-size: 18px;
             margin-bottom: 6rem;
+
+            @media(max-width: $sm) {
+                font-size: 14px;
+                margin-bottom: 4rem;
+            }
+            p {
+                @media(max-width: $sm) {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .password {
@@ -152,7 +220,10 @@
 
     .registration_text_end {
         font-size: 12px;
-
+        @media(max-width: $sm) {
+            font-size: 9px;
+            text-align: center;
+        }
         a {
             color: #FF8800;
 

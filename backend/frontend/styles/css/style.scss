@@ -1,5 +1,26 @@
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-image: url(/styles/img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
 .inter {
@@ -19,13 +40,33 @@ body {
         "YTLC" 500;
 }
 
-.header {
-    margin-top: 1rem
-}
-
 @import "design";
 @import "repair";
 @import "choice";
+@import "enter";
+@import "registration";
+.container-lg{
+    .btn-enter {
+        border-radius: 18px;
+        background-color: #FF8800;
+        display: flex;
+        align-items: center;
+        padding: 17px 17px;
+        font-weight: 700;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 5rem;
+        @media(max-width: $sm) {
+            font-size: 20px;
+        }
+        &:hover{
+            background-color: #E87E04;
+        }
+    }
+}
+.header {
+    margin-top: 1rem
+}
 
 .main_text {
     line-height: 1;
@@ -34,41 +75,79 @@ body {
     margin-top: 8rem;
     color: #ffffff;
 
+    @media(max-width: $sm) {
+        font-size: 40px;
+        margin-top: 4rem;
+    }
+
     span {
         color: #FF8800;
     }
 }
-.main_cards{
+
+.main_cards {
     margin-top: 85px;
     display: flex;
     justify-content: space-between;
-    .card{
+    flex-wrap: wrap;
+
+    @media(max-width: $sm) {
+        margin-top: 4rem;
+    }
+
+    .card {
         width: 25rem;
         background-color: #ffffff;
         border-radius: 29px;
         padding: 30px 20px;
-        .card-body{
-            h5{
+        margin-bottom: 5rem;
+
+        .card-body {
+            h5 {
                 margin-bottom: 1rem;
                 font-size: 32px;
                 font-family: 'Nunito Sans';
+                font-weight: 700;
+
+                @media(max-width: $sm) {
+                    font-size: 27px;
+                    margin-bottom: 2rem;
+                }
             }
-            p{
+
+            p {
                 margin-bottom: 1rem;
                 font-family: 'Nunito Sans';
                 font-size: 22px;
+
+                @media(max-width: $sm) {
+                    font-size: 18px;
+                    margin-bottom: 2rem;
+                }
             }
+
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .btn_main_card{
+
+        .btn_main_card {
             border-radius: 18px;
             background-color: #FF8800;
             display: flex;
             align-items: center;
             padding: 17px 17px;
-            svg{
+            font-weight: 700;
+
+            @media(max-width: $sm) {
+                font-size: 20px;
+            }
+
+            &:hover {
+                background-color: #E87E04;
+            }
+
+            svg {
                 margin-right: 1rem;
             }
         }
